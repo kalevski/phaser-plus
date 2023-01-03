@@ -7,7 +7,8 @@
     "types": "lib/main.d.ts",
     "scripts": {
         "dev": "nodemon -e js -w src --exec \"npm run build\"",
-        "build": "npm run build:src && npm run build:tsd",
+        "build": "npm run build:lib",
+        "build:lib": "npm run build:src && npm run build:tsd",
         "build:src": "parcel build --no-source-maps --no-cache",
         "build:tsd": "tsc -d --allowJs --types @toolcase/base,@toolcase/logging,phaser,@phaser-plus/core --emitDeclarationOnly --target es5 --lib ES2015,DOM,ScriptHost --outDir ./lib src/*.js"
     },

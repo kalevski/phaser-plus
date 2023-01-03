@@ -3,18 +3,19 @@
     "private": true,
     "description": "🐠 Extensions to make PhaserJS more awesome",
     "scripts": {
-        "build": "npm run build --workspaces"
+        "dev:docs": "npm start -w @phaser-plus/docs",
+        "build:libs": "npm run build:lib --workspaces --if-present"
     },
     "workspaces": [
         "core",
         "perspective2d",
         "debugger",
-        "examples"
+        "examples",
+        "_docs"
     ],
     "devDependencies": {
         "@toolcase/base": "^0.18.24",
         "@toolcase/logging": "^0.3.11",
-        "@tweakpane/core": "^1.1.1",
         "nodemon": "^2.0.20",
         "parcel": "^2.8.2",
         "phaser": "^3.55.2",
