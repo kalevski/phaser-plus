@@ -1,6 +1,6 @@
 {
     "name": "@phaser-plus/debugger",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "source": "src/main.js",
     "main": "lib/main.js",
     "module": "lib/module.js",
@@ -11,10 +11,15 @@
         "build:src": "parcel build --no-source-maps --no-cache",
         "build:tsd": "tsc -d --allowJs --types @toolcase/base,@toolcase/logging,phaser --emitDeclarationOnly --target es5 --lib ES2015,DOM,ScriptHost --outDir ./lib src/*.js"
     },
+    "dependencies": {
+        "@tweakpane/plugin-essentials": "^0.1.5",
+        "tweakpane": "^3.1.1"
+    },
     "peerDependencies": {
+        "phaser": "3.x",
         "@toolcase/base": "0.x",
         "@toolcase/logging": "0.x",
-        "phaser": "3.x"
+        "@phaser-plus/core": "0.x"
     },
     "targets": {
         "types": false,

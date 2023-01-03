@@ -1,3 +1,6 @@
 lib
 node_modules
 .parcel-cache
+examples/public/*.js
+examples/public/*.js.map
+examples/public/*.html
