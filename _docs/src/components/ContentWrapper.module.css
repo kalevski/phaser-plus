@@ -1,0 +1,30 @@
+.theme_light {
+    margin: 0;
+    padding: 0;
+    background: var(--ifm-color-light);
+    color: var(--ifm-color-dark);
+}
+
+.theme_dark {
+    margin: 0;
+    padding: 0;
+    background: var(--ifm-color-dark);
+    color: var(--ifm-color-light);
+}
+
+.theme_dark_classic {
+    margin: 0;
+    padding: 0;
+    background: var(--ifm-menu-color-background-active);
+    color: var(--ifm-color-light);
+}
+
+.theme_transparent {
+    margin: 0;
+    padding: 0;
+    color: var(--ifm-color-light);
+}
+
+.theme_transparent p {
+    color: var(--ifm-color-light);
+}

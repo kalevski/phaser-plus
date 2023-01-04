@@ -1,41 +1,40 @@
-import React from 'react';
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import React from 'react'
+import Layout from '@theme/Layout'
+import HeroHeader from '../components/HeroHeader'
+import WaveDecor from '../components/WaveDecor'
+import WideCodeBlock from '../components/WideCodeBlock'
+import Features from '../components/Features'
 
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Docusaurus Tutorial - 5min ⏱️
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
+const layout = {
+    title: 'Extensions to make PhaserJS more awesome',
+    description: 'Tools and extensions to make HTML5 game development easier and fun using PhaserJS',
+    keywords: ''
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
-    </Layout>
-  );
+    return (
+        <Layout title={layout.title} description={layout.description}>
+            <HeroHeader
+                title="Phaser+ HTML5 game dev library"
+                description="Set of open source utilities and tools built on top of PhaserJS"
+                version="Phaser plus: 0.x / Phaser: 3.52.2"
+                button_label="Getting started"
+                button_url="/docs/intro"
+                image_url="/img/gfx-phaser-plus.png"
+            >
+                <WaveDecor />
+            </HeroHeader>
+            <main>
+                <WideCodeBlock />
+                <Features list={[
+                    { title: 'Extended scene', description: 'Phaser+ scene provides API for better organizing the project' },
+                    { title: 'Game flow', description: 'An API attached to the scene for managing game events' },
+                    { title: 'Perspective 2D', description: 'Create isometric or any other kind of linear transformation easily' },
+                    { title: 'Features', description: 'Phaser+ provides an API for creating reusable features for your games' },
+                    { title: 'Layers', description: 'Separate your game world from game UI using Layers' },
+                    { title: 'Debug', description: 'Inspect game objects, change properties or fire game events while testing the game' }
+                ]} />
+            </main>
+        </Layout>
+    )
 }
