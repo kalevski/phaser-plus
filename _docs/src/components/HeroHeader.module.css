@@ -6,6 +6,7 @@
     position: absolute;
     z-index: -1000;
     pointer-events: none;
+    background-image: url('/img/grid.png');
 }
 
 .hero_header {

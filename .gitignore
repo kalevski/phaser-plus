@@ -4,3 +4,5 @@ node_modules
 examples/public/*.js
 examples/public/*.js.map
 examples/public/*.html
+
+**/*:Zone.Identifier
