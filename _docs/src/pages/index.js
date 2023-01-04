@@ -27,7 +27,7 @@ export default function Home() {
             <main>
                 <WideCodeBlock />
                 <Features list={[
-                    { title: 'Extended scene', description: 'Phaser+ scene provides API for better organizing the project' },
+                    { title: 'Extended scene', description: 'Phaser+ scene provides API that helps you structure and organize your project in easy and simple way.' },
                     { title: 'Game flow', description: 'An API attached to the scene for managing game events' },
                     { title: 'Perspective 2D', description: 'Create isometric or any other kind of linear transformation easily' },
                     { title: 'Features', description: 'Phaser+ provides an API for creating reusable features for your games' },
