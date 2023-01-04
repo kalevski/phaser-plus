@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_phaser_plus_docs=self.webpackChunk_phaser_plus_docs||[]).push([[5025],{3087:(e,s,a)=>{a.r(s),a.d(s,{default:()=>i});var l=a(7378),t=a(3829);const n="Examples",c="Rivalis official exaples";function i(){return l.createElement(t.Z,{title:n,description:c},"header",l.createElement("main",null,"main"))}}}]);
