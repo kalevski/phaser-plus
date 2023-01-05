@@ -1,8 +1,8 @@
 import React from 'react'
 import Layout from '@theme/Layout'
-import { getAllScenes } from '@phaser-plus/examples'
 import PageHeader from '../../components/PageHeader'
 import CardGrid from '../../components/CardGrid'
+import BrowserOnly from '@docusaurus/BrowserOnly'
 
 const layout = {
     title: 'Examples',
@@ -11,20 +11,24 @@ const layout = {
 
 export default function Examples() {
     
-    let items = getAllScenes().map(entry => {
-        return {
-            title: entry.title,
-            imageUrl: entry.imageUrl,
-            imageAlt: entry.imageAlt,
-            link: `/examples/run?demo=${entry.slug}`
-        }
-    })
-    
     return (
         <Layout title={layout.title} description={layout.description}>
             <PageHeader />
             <main>
-                <CardGrid items={items} />
+                <BrowserOnly>
+                {() => {
+                    const getAllScenes = require('@phaser-plus/examples').getAllScenes
+                    let items = getAllScenes().map(entry => {
+                        return {
+                            title: entry.title,
+                            imageUrl: entry.imageUrl,
+                            imageAlt: entry.imageAlt,
+                            link: `/examples/run?demo=${entry.slug}`
+                        }
+                    })
+                    return <CardGrid items={items} />
+                }}
+                </BrowserOnly>
             </main>
         </Layout>
     )

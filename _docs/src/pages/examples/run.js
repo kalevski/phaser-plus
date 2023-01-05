@@ -1,10 +1,6 @@
 import React from 'react'
 import Layout from '@theme/Layout'
-import { useLocation } from '@docusaurus/router'
-import { getScene } from '@phaser-plus/examples'
-
-import PageHeader from '../../components/PageHeader'
-import PhaserExample from '../../components/PhaserExample'
+import BrowserOnly from '@docusaurus/BrowserOnly'
 
 const layout = {
     title: 'Examples',
@@ -12,21 +8,31 @@ const layout = {
 }
 
 export default function RunDemo() {
-    const location = useLocation()
-    let url = new URL(`http://phaser-plus.kalevski.dev${location.pathname}${location.search}`)
     
-    let entry = getScene(url.searchParams.get('demo'))
-    console.log(entry)
     
     return (
         <Layout title={layout.title} description={layout.description}>
-            <PageHeader
-                title={entry.title}
-                description={entry.description}
-            />
-            <main>
-                <PhaserExample entry={entry} />
-            </main>
+            <BrowserOnly>
+                {() => {
+                    let getScene = require('@phaser-plus/examples').getScene
+                    let url = new URL(window.location.href)
+                    let entry = getScene(url.searchParams.get('demo'))
+
+                    const PhaserExample = require('../../components/PhaserExample').default
+                    const PageHeader = require('../../components/PageHeader').default
+                    return (
+                        <>
+                            <PageHeader
+                                title={entry.title}
+                                description={entry.description}
+                            />
+                            <main>
+                                <PhaserExample entry={entry} />
+                            </main>
+                        </>
+                    )
+                }}
+            </BrowserOnly>
         </Layout>
     )
 }
