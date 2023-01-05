@@ -63,7 +63,7 @@ const CardGrid = (props) => {
     return (
         <div className="container">
             <div className="row">
-                {items.map(item => <div className={clsx('col col--4')}><Card item={item} /></div>)}
+                {items.map((item, index) => <div key={index} className={clsx('col col--4')}><Card item={item} /></div>)}
             </div>
         </div>
     )

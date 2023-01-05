@@ -51,7 +51,7 @@ class PhaserExample extends Component {
     }
 
     componentWillUnmount() {
-        console.log('here ?')
+        this.game.destroy()
     }
 
     render() {

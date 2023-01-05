@@ -63,15 +63,16 @@ class Layer extends Feature {
     onDestroy() {
         this.container.destroy()
         this.container = null
-        
+        this.layerLoop.remove()
+        this.layerLoop.destroy()
+        if (this.camera === null) {
+            return
+        }
         if (this.camera.id === this.scene.cameras.main.id) {
             this.camera.setName('')
         } else {
             this.scene.cameras.remove(this.camera)
         }
-
-        this.layerLoop.remove()
-        this.layerLoop.destroy()
     }
 
     get camera() {
