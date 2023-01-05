@@ -1,0 +1,19 @@
+.card_container {
+    padding: 20px 10px;
+}
+
+.card {
+
+}
+
+.card_img {
+    padding: 5px;
+    background: var(--ifm-color-dark);
+}
+
+.card_title {
+    padding: 5px;
+    background-color: var(--ifm-color-dark);
+    text-align: center;
+    text-decoration: none;
+}

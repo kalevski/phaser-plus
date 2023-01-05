@@ -1,0 +1,12 @@
+.header {
+    width: 100%;
+    margin: 40px 0;
+}
+
+.header h1 {
+    text-align: center;
+}
+
+.header p {
+    text-align: center;
+}

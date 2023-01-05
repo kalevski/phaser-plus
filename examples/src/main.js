@@ -1,18 +1,22 @@
-import * as Scenes from './scenes'
+import scenes from './scenes'
 
 
 /**
- * @template {Scene} T
- * @param {string} name
- * @returns {new T|null} 
+ * @param {string} slug
+ * @returns {import('./scenes').SceneEntry} 
  */
-const getSceneClass = (name) => {
-    if (typeof Scenes[name] !== 'undefined') {
-        return Scenes[name]
-    }
-    return null
+const getScene = (slug) => {
+    return scenes.find(entry => entry.slug === slug) || null
+}
+
+/**
+ * @returns {Array<import('./scenes').SceneEntry>}
+ */
+const getAllScenes = () => {
+    return scenes
 }
 
 export {
-    getSceneClass
+    getScene,
+    getAllScenes
 }

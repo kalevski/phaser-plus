@@ -1,6 +1,5 @@
 import { AUTO, Core, Game, Scale } from 'phaser'
-import { getSceneClass } from './main'
-import { logging } from '@toolcase/logging'
+import { getScene } from './main'
 
 /** @type {Core.Config} */
 const config = {
@@ -24,16 +23,14 @@ const config = {
     height: 720
 }
 
-const logger = logging.getLogger('@phaser-plus/examples')
 
 let url = new window.URL(window.location.href)
-let sceneName = url.searchParams.get('scene') || 'HelloWorld'
-let Scene = getSceneClass(sceneName)
+let sceneName = url.searchParams.get('scene') || 'hello-world'
+let entry = getScene(sceneName)
+if (entry !== null) {
+    const game = new Game(config)
+    game.scene.add('default', new entry.sceneClass())
+    game.scene.start('default')
+}
 
 
-const game = new Game(config)
-game.scene.add('default', new Scene())
-game.scene.start('default')
-
-
-logger.info(`${sceneName}`)

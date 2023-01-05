@@ -44,3 +44,7 @@
   --ifm-color-light: #fff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
+
+.tp-dfwv {
+  top: 70px !important;
+}
