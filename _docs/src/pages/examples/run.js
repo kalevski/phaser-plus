@@ -16,11 +16,12 @@ export default function RunDemo() {
                 {() => {
                     let getScene = require('@phaser-plus/examples').getScene
                     let url = new URL(window.location.href)
-                    let entry = getScene(url.searchParams.get('demo'))
+                    let slug = url.searchParams.get('demo')
+                    let entry = getScene(slug)
 
                     const PhaserExample = require('../../components/PhaserExample').default
                     const PageHeader = require('../../components/PageHeader').default
-                    return (
+                    return entry === null ? (<></>) : (
                         <>
                             <PageHeader
                                 title={entry.title}

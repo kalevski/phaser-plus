@@ -54,6 +54,10 @@ class PhaserExample extends Component {
         this.game.destroy()
     }
 
+    componentDidCatch(error, errorInfo) {
+        console.log(error, errorInfo)
+    }
+
     render() {
         const {
             title,
