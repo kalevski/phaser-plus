@@ -16,19 +16,19 @@ Phaser Plus is a set of utilities and tools in the form of [free and open-source
 
 Currently **phaser-plus** is in early-stage of development. If you are trying to setup a project and you have any problems with that, [open an issue](https://github.com/kalevski/phaser-plus/issues) or [start a discussion](https://github.com/kalevski/phaser-plus/discussions) on GitHub.
 
-## 🚀 Getting started
+### 🚀 Getting started
 [TBD]
 
-## 📦 Packages
+### 📦 Packages
  - [@phaser-plus/core](https://github.com/kalevski/phaser-plus/tree/main/core)
  - [@phaser-plus/cli](https://github.com/kalevski/phaser-plus/tree/main/cli)
  - [@phaser-plus/debugger](https://github.com/kalevski/phaser-plus/tree/main/debugger)
  - [@phaser-plus/perspective2d](https://github.com/kalevski/phaser-plus/tree/main/perspective2d)
 
-## 🚀 Run examples locally
+### 🚀 Run examples locally
 [TBD]
 
-## 👥 How to contribute
+### 👥 How to contribute
 [TBD]
 
 ## License
