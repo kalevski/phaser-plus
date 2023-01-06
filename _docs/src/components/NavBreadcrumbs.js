@@ -22,9 +22,9 @@ const NavBreadcrumbs = (props) => {
     return (
         <nav className={DocBreadcrumbs.breadcrumbsContainer}>
             <ul className="breadcrumbs">
-                {items.map(item => (
-                    <li class="breadcrumbs__item">
-                        <a aria-label={item.label} class="breadcrumbs__link" href={item.href}>{item.label}</a>
+                {items.map((item, index) => (
+                    <li key={index} className="breadcrumbs__item">
+                        <a aria-label={item.label} className="breadcrumbs__link" href={item.href}>{item.label}</a>
                     </li>
                 ))}
             </ul>
