@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: 'Phaser+',
+    title: 'Phaser Plus',
     tagline: 'Extensions to make PhaserJS more awesome',
     url: 'https://phaser-plus.kalevski.dev',
     baseUrl: '/',
@@ -46,7 +46,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
         navbar: {
-            title: 'Phaser+',
+            title: 'Phaser Plus',
             logo: {
                 alt: 'Extensions to make PhaserJS more awesome',
                 src: 'img/logo.png',

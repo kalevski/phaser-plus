@@ -3,7 +3,6 @@
     "private": true,
     "description": "🐠 Extensions to make PhaserJS more awesome",
     "scripts": {
-        "dev:docs": "npm start -w @phaser-plus/docs",
         "build:libs": "npm run build:lib --workspaces --if-present"
     },
     "workspaces": [
@@ -11,6 +10,7 @@
         "perspective2d",
         "debugger",
         "examples",
+        "cli",
         "_docs"
     ],
     "devDependencies": {

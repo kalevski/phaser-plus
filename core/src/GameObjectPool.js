@@ -106,9 +106,8 @@ class GameObjectPool {
     release(object) {
         if (typeof object.release === 'function') {
             object.release()
-            this.scene.children.remove(object)
         } else {
-            this.logger.warning('can not be released, the object is not created by the pool', gameObject)
+            this.logger.warning('can not be released, the object is not created by the pool', object)
         }
         return this
     }
@@ -144,7 +143,6 @@ class GameObjectPool {
         if (typeof object.onCreate === 'function') {
             object.onCreate()
         }
-        this.scene.add.existing(object)
     }
 
 }

@@ -21,12 +21,18 @@ export default function RunDemo() {
 
                     const PhaserExample = require('../../components/PhaserExample').default
                     const PageHeader = require('../../components/PageHeader').default
+                    const NavBreadcrumbs = require('../../components/NavBreadcrumbs').default
                     return entry === null ? (<></>) : (
                         <>
                             <PageHeader
                                 title={entry.title}
-                                description={entry.description}
-                            />
+                                description={entry.description}>
+                                <NavBreadcrumbs items={[
+                                    { label: 'Examples', href: '/examples' },
+                                    { label: entry.title, href: `/examples/run?demo=${entry.slug}` }
+                                ]} />
+                            </PageHeader>
+                            
                             <main>
                                 <PhaserExample entry={entry} />
                             </main>

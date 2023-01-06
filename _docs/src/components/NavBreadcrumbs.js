@@ -1,4 +1,5 @@
 import React from 'react'
+import DocBreadcrumbs from '@docusaurus/theme-classic/lib/theme/DocBreadcrumbs/styles.module.css'
 
 /**
  * @typedef BreadcrumbItem

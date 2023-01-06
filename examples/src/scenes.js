@@ -20,9 +20,9 @@ const scenes = [
         slug: 'hello-world',
         title: 'Hello World',
         sceneFile: 'HelloWorld.js',
-        description: '',
-        imageUrl: '',
-        imageAlt: '',
+        description: 'Hello world example',
+        imageUrl: 'https://user-images.githubusercontent.com/10467454/211034362-5e6715bb-ca65-4570-9eab-35685b5cc606.png',
+        imageAlt: 'Phaser+ example - hello world',
         sceneClass: HelloWorld
     }
 ]

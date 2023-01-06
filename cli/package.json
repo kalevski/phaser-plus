@@ -1,0 +1,64 @@
+{
+    "name": "@phaser-plus/cli",
+    "version": "0.1.0",
+    "description": "CLI tools for AirConsole game development",
+    "main": "src/index.js",
+    "bin": {
+        "phaserplus": "bin/cli.js"
+    },
+    "scripts": {
+        "dev": "nodemon -e js -w src --exec \"npm run build\"",
+        "build": "parcel build --log-level info --target cli"
+    },
+    "targets": {
+        "cli": {
+            "source": "src/cli.js",
+            "distDir": "./bin",
+            "optimize": true,
+            "scopeHoist": false,
+            "engines": {
+            "node": ">= 16"
+        },
+        "includeNodeModules": true,
+        "sourceMap": false
+        }
+    },
+    "directories": {
+        "bin": "bin"
+    },
+    "files": [
+        "templates"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kalevski/airconsole-cli.git"
+    },
+    "keywords": [
+        "airconsole",
+        "dev",
+        "tools",
+        "cli"
+    ],
+    "author": "Daniel Kalevski",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/kalevski/airconsole-cli/issues"
+    },
+    "homepage": "https://github.com/kalevski/airconsole-cli#readme",
+    "devDependencies": {
+        "commander": "^9.4.1",
+        "concurrently": "^7.6.0",
+        "express": "^4.18.2",
+        "fs-extra": "^11.1.0",
+        "nodemon": "^2.0.20",
+        "open": "^8.4.0",
+        "ora": "6.1.2"
+    },
+    "peerDependencies": {
+        "parcel": "2.x"
+    }
+}

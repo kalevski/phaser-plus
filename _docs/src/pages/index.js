@@ -15,9 +15,9 @@ export default function Home() {
     return (
         <Layout title={layout.title} description={layout.description}>
             <HeroHeader
-                title="Phaser+ HTML5 game dev library"
+                title="Phaser Plus"
                 description="Set of open source utilities and tools built on top of PhaserJS"
-                version="Phaser plus: 0.x / Phaser: 3.52.2"
+                version="Phaser Plus: 0.x / Phaser: 3.52.2"
                 button_label="Getting started"
                 button_url="/docs/intro"
                 image_url="/img/gfx-phaser-plus.png"
@@ -27,12 +27,11 @@ export default function Home() {
             <main>
                 <WideCodeBlock />
                 <Features list={[
-                    { title: 'Extended scene', description: 'Phaser+ scene provides API that helps you structure and organize your project in easy and simple way.' },
-                    { title: 'Game flow', description: 'An API attached to the scene for managing game events' },
-                    { title: 'Perspective 2D', description: 'Create isometric or any other kind of linear transformation easily' },
-                    { title: 'Features', description: 'Phaser+ provides an API for creating reusable features for your games' },
-                    { title: 'Layers', description: 'Separate your game world from game UI using Layers' },
-                    { title: 'Debug', description: 'Inspect game objects, change properties or fire game events while testing the game' }
+                    { title: 'Game flow', description: 'An API attached to the scene for managing game events', image_url: '/img/icons/icon_game_flow.png', image_alt: 'Phaser+ game flow' },
+                    { title: 'Perspective 2D', description: 'Create isometric or any other kind of linear transformation easily', image_url: '/img/icons/icon_perspective.png', image_alt: 'Phaser+ Perspective2D'  },
+                    { title: 'Features', description: 'Phaser+ provides an API for creating reusable features for your games', image_url: '/img/icons/icon_features.png', image_alt: 'Phaser+ Features'  },
+                    // { title: 'Layers', description: 'Separate your game world from game UI using Layers', image_url: '/img/icons/icon_layers.png', image_alt: 'Phaser+ game flow'  },
+                    { title: 'Debug', description: 'Inspect game objects, change properties or fire game events while testing the game', image_url: '/img/icons/icon_debug.png', image_alt: 'Phaser+ game flow'  }
                 ]} />
             </main>
         </Layout>

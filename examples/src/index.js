@@ -31,9 +31,6 @@ if (entry !== null) {
     const game = new Game(config)
     game.scene.add('default', new entry.sceneClass())
     game.scene.start('default')
-    setTimeout(() => {
-        game.destroy(true, false)
-    }, 2000)
 }
 
 

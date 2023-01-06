@@ -16,7 +16,8 @@ const PageHeader = (props) => {
 
     const {
         title = '[TITLE HERE]',
-        description = '[DESCRIPTION HERE]'
+        description = '[DESCRIPTION HERE]',
+        children
     } = props
 
     return (
@@ -30,6 +31,11 @@ const PageHeader = (props) => {
                 <div className="row">
                     <div className={clsx('col col--6 col--offset-3')}>
                         <p>{description}</p>
+                    </div>
+                </div>
+                <div className="row">
+                    <div className={clsx('col col--8 col--offset-2')}>
+                        {children}
                     </div>
                 </div>
             </div>

@@ -13,7 +13,7 @@ export default function Examples() {
     
     return (
         <Layout title={layout.title} description={layout.description}>
-            <PageHeader />
+            <PageHeader title="Phaser Plus Examples" description="" />
             <main>
                 <BrowserOnly>
                 {() => {

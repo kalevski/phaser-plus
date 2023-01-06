@@ -58,7 +58,7 @@ const Features = (props) => {
                     <div className={clsx('col col--12')}>
                         <h3 className={clsx(styles.h_special)}>Features</h3>
                     </div>
-                    {list.map((feature, index) => <div key={index} className="col col--4">
+                    {list.map((feature, index) => <div key={index} className="col col--3">
                         <FeatureBlock feature={feature} />
                     </div>)}
                 </div>
