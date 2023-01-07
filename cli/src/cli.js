@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import { Command } from 'commander'
-import ProjectBuild from './commands/ProjectBuild'
 import ProjectInit from './commands/ProjectInit'
 import ProjectStart from './commands/ProjectStart'
 
@@ -13,7 +12,7 @@ cli.addCommand(new ProjectInit('init'))
 
 const project = new Command('project')
 
-// project.addCommand(new ProjectStart('start'))
+project.addCommand(new ProjectStart('start'))
 // project.addCommand(new ProjectBuild('build'))
 
 cli.addCommand(project)

@@ -1,4 +1,5 @@
 lib
+bin
 node_modules
 .parcel-cache
 examples/public/*.js
