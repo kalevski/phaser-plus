@@ -5,8 +5,9 @@ import { logging } from '@toolcase/logging'
 import { Command } from 'commander'
 import fs from 'fs'
 import path from 'path'
-import { getPath, isDirectoryEmpty } from '../utils/files'
+import { deleteFile, getPath, isDirectoryEmpty } from '../utils/files'
 import { getMachineIP } from '../utils/network'
+import { getBuildFiles, getProjectEntrypoints } from '../utils/project'
 
 
 class ProjectStart extends Command {
@@ -37,22 +38,20 @@ class ProjectStart extends Command {
             port = 3500
         } = this.opts()
         
+
+
         const projectPath = getPath()
         const sourcePath = getPath(relativePath)
 
-        if (isDirectoryEmpty(sourcePath) === null) {
-            return this.logger.error(`❌ invalid source path, directory ${sourcePath} does not exist`)
-        }
-
-        let htmlFiles = fs.readdirSync(sourcePath).filter(filePath => filePath.split('.').pop() === 'html')
+        let entrypoints = getProjectEntrypoints(sourcePath)
         
         let hrmPort = 2334
-        const commands = htmlFiles.map(htmlFile => {
-            let htmlFilePath = path.join(relativePath, htmlFile)
+        const commands = entrypoints.map(file => {
+            let filePath = path.join(relativePath, file)
             let color = this.colors.shift() || Color.DEEP_ORANGE
             return {
-                command: `parcel watch -p ${hrmPort++} --dist-dir ${distDir} ${htmlFilePath}`,
-                name: htmlFile,
+                command: `parcel watch -p ${hrmPort++} --no-cache --dist-dir ${distDir} ${filePath}`,
+                name: file,
                 prefixColor: color,
                 cwd: projectPath
             }
@@ -69,8 +68,16 @@ class ProjectStart extends Command {
             process.exit() 
         })
 
-        const server = express()
         let publicPath = getPath(distDir)
+        let buildFiles = getBuildFiles(publicPath)
+        
+        // clean directory
+        buildFiles.forEach(file => {
+            let filePath = path.join(publicPath, file)
+            deleteFile(filePath)
+        })
+
+        const server = express()
         let serverPort = typeof port === 'number' ? port :  parseInt(port, 10)
         let ip = getMachineIP()
         let url = `http://${ip}:${serverPort}`
@@ -79,8 +86,8 @@ class ProjectStart extends Command {
         server.use(express.static(publicPath))
         server.listen(serverPort, '0.0.0.0', () => {
             this.logger.info(`🌐 server started: \x1b[33m ${url} \x1b[0m`)
-            htmlFiles.filter(htmlFile => htmlFile !== 'index.html').forEach(htmlFile => {
-                this.logger.info(`🌐 open ${htmlFile}: \x1b[33m ${url}/${htmlFile} \x1b[0m`)
+            entrypoints.filter(file => path.extname(file) === '.html' && file !== 'index.html').forEach(file => {
+                this.logger.info(`🌐 open ${file}: \x1b[33m ${url}/${file} \x1b[0m`)
             })
         })
     }

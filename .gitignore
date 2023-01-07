@@ -7,3 +7,5 @@ examples/public/*.js.map
 examples/public/*.html
 
 **/*:Zone.Identifier
+
+my_project

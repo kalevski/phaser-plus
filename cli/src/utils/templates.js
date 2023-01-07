@@ -3,7 +3,8 @@ import path from 'path'
 import { copyDirectory, copyFile } from './files'
 
 const get = (name) => {
-    const filePath = path.join(__dirname, '../templates', name)
+    const filePath = path.join(__dirname, '../../templates', name)
+    console.log(filePath)
     let exists = fs.existsSync(filePath)
     if (!exists) {
         throw new Error(`template=(${name}) does not exist`)
@@ -12,7 +13,7 @@ const get = (name) => {
 }
 
 const clone = (dirName, destDir) => {
-    const srcDir = path.join(__dirname, '../templates', dirName)
+    const srcDir = path.join(__dirname, '../../templates', dirName)
     let exists = fs.existsSync(srcDir)
     if (!exists) {
         throw new Error(`template directory=(${dirName}) does not exist`)

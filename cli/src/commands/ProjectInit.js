@@ -35,7 +35,7 @@ class ProjectInit extends Command {
 
 
         if (isDirectoryEmpty(projectPath) === false) {
-            return this.logger.error(`❌ the directory [${path}] is not empty`)
+            return this.logger.error(`❌ the directory [${projectPath}] is not empty`)
         }
         let dirExist = !(isDirectoryEmpty(projectPath) === null)
 

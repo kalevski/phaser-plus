@@ -2,6 +2,7 @@ import process from 'process'
 import path from 'path'
 import fs from 'fs'
 
+
 export const getPath = (relativePath = './') => {
     return path.join(process.cwd(), relativePath)
 }
@@ -63,5 +64,14 @@ export const createDirectory = (dirPath) => {
         return dirPath
     } catch (error) {
         return null
+    }
+}
+
+export const deleteFile = (filePath) => {
+    try {
+        fs.rmSync(filePath)
+        return true
+    } catch (error) {
+        return false
     }
 }

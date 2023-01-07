@@ -9,9 +9,6 @@ const config = {
         autoCenter: Scale.CENTER_BOTH,
     },
     dom: {
-        
-    },
-    dom: {
         createContainer: true
     },
     width: 1280,
