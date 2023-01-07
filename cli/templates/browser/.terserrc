@@ -1,0 +1,14 @@
+{
+    "compress": {
+        "passes": 1,
+        "drop_console": true,
+        "toplevel": true
+    },
+    "mangle": {
+        "toplevel": true,
+        "module": true
+    },
+    "format": {
+        "comments": false
+    }
+}

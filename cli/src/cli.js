@@ -13,8 +13,8 @@ cli.addCommand(new ProjectInit('init'))
 
 const project = new Command('project')
 
-// project.addCommand(new ProjectStart('start'))
-// project.addCommand(new ProjectBuild('build'))
+project.addCommand(new ProjectStart('start'))
+project.addCommand(new ProjectBuild('build'))
 
 cli.addCommand(project)
 

@@ -38,25 +38,18 @@
         "url": "git+https://github.com/kalevski/airconsole-cli.git"
     },
     "keywords": [
-        "airconsole",
+        "phaser-plus",
         "dev",
         "tools",
         "cli"
     ],
     "author": "Daniel Kalevski",
     "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/kalevski/airconsole-cli/issues"
-    },
-    "homepage": "https://github.com/kalevski/airconsole-cli#readme",
     "devDependencies": {
         "commander": "^9.4.1",
         "concurrently": "^7.6.0",
         "express": "^4.18.2",
-        "fs-extra": "^11.1.0",
-        "nodemon": "^2.0.20",
-        "open": "^8.4.0",
-        "ora": "6.1.2"
+        "nodemon": "^2.0.20"
     },
     "peerDependencies": {
         "parcel": "2.x"
