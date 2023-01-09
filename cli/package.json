@@ -46,7 +46,7 @@
     "author": "Daniel Kalevski",
     "license": "MIT",
     "devDependencies": {
-        "commander": "^9.4.1",
+        "commander": "^9.5.0",
         "concurrently": "^7.6.0",
         "express": "^4.18.2",
         "nodemon": "^2.0.20"
