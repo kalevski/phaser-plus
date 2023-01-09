@@ -1,0 +1,567 @@
+{
+	"textures": [
+		{
+			"image": "objects.png",
+			"normalMap": "objects_n.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 1019,
+				"h": 493
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "fireplace",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 279,
+						"h": 473
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 279,
+						"h": 473
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 279,
+						"h": 473
+					}
+				},
+				{
+					"filename": "main_door",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 250,
+						"h": 345
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 250,
+						"h": 345
+					},
+					"frame": {
+						"x": 282,
+						"y": 1,
+						"w": 250,
+						"h": 345
+					}
+				},
+				{
+					"filename": "round_table",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 164,
+						"h": 136
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 164,
+						"h": 136
+					},
+					"frame": {
+						"x": 282,
+						"y": 348,
+						"w": 164,
+						"h": 136
+					}
+				},
+				{
+					"filename": "barrel_vertical",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 88,
+						"h": 123
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 88,
+						"h": 123
+					},
+					"frame": {
+						"x": 448,
+						"y": 348,
+						"w": 88,
+						"h": 123
+					}
+				},
+				{
+					"filename": "kitchen_door",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 144,
+						"h": 279
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 144,
+						"h": 279
+					},
+					"frame": {
+						"x": 534,
+						"y": 1,
+						"w": 144,
+						"h": 279
+					}
+				},
+				{
+					"filename": "candle_off",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 22,
+						"h": 42
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 22,
+						"h": 42
+					},
+					"frame": {
+						"x": 534,
+						"y": 282,
+						"w": 22,
+						"h": 42
+					}
+				},
+				{
+					"filename": "booze_bar",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 299,
+						"h": 216
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 286,
+						"h": 216
+					},
+					"frame": {
+						"x": 680,
+						"y": 1,
+						"w": 286,
+						"h": 216
+					}
+				},
+				{
+					"filename": "flask",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 50,
+						"h": 95
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 50,
+						"h": 95
+					},
+					"frame": {
+						"x": 968,
+						"y": 1,
+						"w": 50,
+						"h": 95
+					}
+				},
+				{
+					"filename": "firewood_row_4",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 46,
+						"h": 27
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 46,
+						"h": 27
+					},
+					"frame": {
+						"x": 968,
+						"y": 98,
+						"w": 46,
+						"h": 27
+					}
+				},
+				{
+					"filename": "flask_content",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 43,
+						"h": 33
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 43,
+						"h": 33
+					},
+					"frame": {
+						"x": 968,
+						"y": 127,
+						"w": 43,
+						"h": 33
+					}
+				},
+				{
+					"filename": "candle_on",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 22,
+						"h": 42
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 22,
+						"h": 42
+					},
+					"frame": {
+						"x": 968,
+						"y": 162,
+						"w": 22,
+						"h": 42
+					}
+				},
+				{
+					"filename": "barrel_stand",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 141,
+						"h": 104
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 141,
+						"h": 104
+					},
+					"frame": {
+						"x": 538,
+						"y": 326,
+						"w": 141,
+						"h": 104
+					}
+				},
+				{
+					"filename": "barrel_horizontal",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 125,
+						"h": 102
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 125,
+						"h": 102
+					},
+					"frame": {
+						"x": 680,
+						"y": 219,
+						"w": 125,
+						"h": 102
+					}
+				},
+				{
+					"filename": "firewood_row_3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 67,
+						"h": 32
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 67,
+						"h": 32
+					},
+					"frame": {
+						"x": 558,
+						"y": 282,
+						"w": 67,
+						"h": 32
+					}
+				},
+				{
+					"filename": "firewood_row_1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 93,
+						"h": 21
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 93,
+						"h": 21
+					},
+					"frame": {
+						"x": 538,
+						"y": 432,
+						"w": 93,
+						"h": 21
+					}
+				},
+				{
+					"filename": "firewood_row_2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 72,
+						"h": 21
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 72,
+						"h": 21
+					},
+					"frame": {
+						"x": 538,
+						"y": 455,
+						"w": 72,
+						"h": 21
+					}
+				},
+				{
+					"filename": "flame_large_1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 69,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 69,
+						"h": 84
+					},
+					"frame": {
+						"x": 681,
+						"y": 323,
+						"w": 69,
+						"h": 84
+					}
+				},
+				{
+					"filename": "round_chair",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 80,
+						"h": 83
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 80,
+						"h": 83
+					},
+					"frame": {
+						"x": 681,
+						"y": 409,
+						"w": 80,
+						"h": 83
+					}
+				},
+				{
+					"filename": "flame_large_2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 69,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 69,
+						"h": 84
+					},
+					"frame": {
+						"x": 752,
+						"y": 323,
+						"w": 69,
+						"h": 84
+					}
+				},
+				{
+					"filename": "bucket_firewood",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 70,
+						"h": 76
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 70,
+						"h": 76
+					},
+					"frame": {
+						"x": 763,
+						"y": 409,
+						"w": 70,
+						"h": 76
+					}
+				},
+				{
+					"filename": "flame_large_3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 69,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 69,
+						"h": 84
+					},
+					"frame": {
+						"x": 807,
+						"y": 219,
+						"w": 69,
+						"h": 84
+					}
+				},
+				{
+					"filename": "flame_medium_1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 69,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 69,
+						"h": 84
+					},
+					"frame": {
+						"x": 823,
+						"y": 305,
+						"w": 69,
+						"h": 84
+					}
+				},
+				{
+					"filename": "flame_medium_2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 69,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 69,
+						"h": 84
+					},
+					"frame": {
+						"x": 878,
+						"y": 219,
+						"w": 69,
+						"h": 84
+					}
+				},
+				{
+					"filename": "flame_medium_3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 69,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 69,
+						"h": 84
+					},
+					"frame": {
+						"x": 949,
+						"y": 219,
+						"w": 69,
+						"h": 84
+					}
+				},
+				{
+					"filename": "flame_small_1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 69,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 69,
+						"h": 84
+					},
+					"frame": {
+						"x": 835,
+						"y": 391,
+						"w": 69,
+						"h": 84
+					}
+				},
+				{
+					"filename": "flame_small_2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 69,
+						"h": 84
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 69,
+						"h": 84
+					},
+					"frame": {
+						"x": 894,
+						"y": 305,
+						"w": 69,
+						"h": 84
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:f70b6a8e4ed1344ee99a53c7d7b49bf5:173401946030420f248e38130105487b:7e18c2498623b98d699a09fd8a7f0ad7$"
+	}
+}
