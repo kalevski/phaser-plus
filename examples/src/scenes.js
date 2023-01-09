@@ -1,5 +1,7 @@
 import { Scene } from '@phaser-plus/core'
 import HelloWorld from './HelloWorld'
+import ObjectPooling from './ObjectPooling'
+
 
 /**
  * @typedef SceneEntry
@@ -24,7 +26,16 @@ const scenes = [
         imageUrl: 'https://user-images.githubusercontent.com/10467454/211034362-5e6715bb-ca65-4570-9eab-35685b5cc606.png',
         imageAlt: 'Phaser+ example - hello world',
         sceneClass: HelloWorld
-    }
+    },
+    {
+        slug: 'object-pooling',
+        title: 'Game Object Pooling',
+        sceneFile: 'ObjectPooling.js',
+        description: 'Object Pooling example',
+        imageUrl: 'https://user-images.githubusercontent.com/10467454/211034362-5e6715bb-ca65-4570-9eab-35685b5cc606.png',
+        imageAlt: 'Phaser+ example - object pooling',
+        sceneClass: ObjectPooling
+    },
 ]
 
 export default scenes
