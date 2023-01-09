@@ -1,6 +1,6 @@
 {
     "name": "@phaser-plus/cli",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "CLI tools for AirConsole game development",
     "main": "src/index.js",
     "bin": {
@@ -46,7 +46,7 @@
     "author": "Daniel Kalevski",
     "license": "MIT",
     "devDependencies": {
-        "commander": "^9.4.1",
+        "commander": "^9.5.0",
         "concurrently": "^7.6.0",
         "express": "^4.18.2",
         "nodemon": "^2.0.20"

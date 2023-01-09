@@ -1,6 +1,6 @@
 {
     "name": "@phaser-plus/debugger",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "source": "src/main.js",
     "main": "lib/main.js",
     "module": "lib/module.js",
