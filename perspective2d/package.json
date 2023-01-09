@@ -1,6 +1,7 @@
 {
     "name": "@phaser-plus/perspective2d",
-    "version": "0.1.1",
+    "version": "0.1.2",
+    "description": "Create games with a linearly transformed projection",
     "source": "src/main.js",
     "main": "lib/main.js",
     "module": "lib/module.js",
@@ -27,16 +28,6 @@
             "optimize": true
         }
     },
-    "homepage": "https://phaser-plus.kalevski.dev",
-    "keywords": [
-        "phaser",
-        "phaser3",
-        "utilities",
-        "games",
-        "html5",
-        "gamedev",
-        "browser"
-    ],
     "directories": {
         "lib": "lib"
     },
@@ -46,6 +37,22 @@
     "publishConfig": {
         "access": "public",
         "registry": "https://registry.npmjs.org/"
+    },
+    "homepage": "https://phaser-plus.kalevski.dev",
+    "keywords": [
+        "phaser",
+        "phaser3",
+        "utilities",
+        "games",
+        "html5",
+        "gamedev",
+        "browser",
+        "isometric",
+        "2d",
+        "perspective"
+    ],
+    "author": {
+        "name": "kalevski"
     },
     "repository": {
         "type": "git",

@@ -1,6 +1,7 @@
 {
     "name": "@phaser-plus/core",
-    "version": "0.1.1",
+    "version": "0.1.2",
+    "description": "Set of tools and utils built on top of PhaserJS",
     "source": "src/main.js",
     "main": "lib/main.js",
     "module": "lib/module.js",
@@ -29,6 +30,16 @@
             "optimize": true
         }
     },
+    "directories": {
+        "lib": "lib"
+    },
+    "files": [
+        "lib"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
     "homepage": "https://phaser-plus.kalevski.dev",
     "keywords": [
         "phaser",
@@ -39,15 +50,8 @@
         "gamedev",
         "browser"
     ],
-    "directories": {
-        "lib": "lib"
-    },
-    "files": [
-        "lib"
-    ],
-    "publishConfig": {
-        "access": "public",
-        "registry": "https://registry.npmjs.org/"
+    "author": {
+        "name": "kalevski"
     },
     "repository": {
         "type": "git",

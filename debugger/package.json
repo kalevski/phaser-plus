@@ -1,6 +1,7 @@
 {
     "name": "@phaser-plus/debugger",
-    "version": "0.1.1",
+    "version": "0.1.2",
+    "description": "Debugger for PhaserJS games",
     "source": "src/main.js",
     "main": "lib/main.js",
     "module": "lib/module.js",
@@ -31,16 +32,6 @@
             "optimize": true
         }
     },
-    "homepage": "https://phaser-plus.kalevski.dev",
-    "keywords": [
-        "phaser",
-        "phaser3",
-        "utilities",
-        "games",
-        "html5",
-        "gamedev",
-        "browser"
-    ],
     "directories": {
         "lib": "lib"
     },
@@ -50,6 +41,19 @@
     "publishConfig": {
         "access": "public",
         "registry": "https://registry.npmjs.org/"
+    },
+    "homepage": "https://phaser-plus.kalevski.dev",
+    "keywords": [
+        "phaser",
+        "phaser3",
+        "debugging",
+        "ui",
+        "html5",
+        "gamedev",
+        "browser"
+    ],
+    "author": {
+        "name": "kalevski"
     },
     "repository": {
         "type": "git",
