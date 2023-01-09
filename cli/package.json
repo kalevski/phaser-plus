@@ -1,6 +1,6 @@
 {
     "name": "@phaser-plus/cli",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "CLI tools for AirConsole game development",
     "main": "src/index.js",
     "bin": {

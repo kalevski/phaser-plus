@@ -59,14 +59,14 @@ class Feature {
 
     /**
      * @protected
-     * @param {*} event 
+     * @param {string} event 
      * @param  {...any} messages 
      */
     emit(event, ...messages) {
         if (this.scene.features.events.listenerCount(event) === 0) {
             return this.logger.warning(`event=(${event}) is not handled, payload sent:`, ...messages)
         }
-        super.emit(event, ...messages)
+        this.scene.features.emit(event, ...messages)
     }
 
 }

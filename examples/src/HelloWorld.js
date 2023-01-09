@@ -5,7 +5,7 @@ import { Structs } from '@phaser-plus/core'
 class HelloWorld extends Scene2D {
 
     onInit() {
-        this.world.projection = new Structs.Matrix2.createISO(64)
+        this.world.projection = Structs.Matrix2.createISO(64)
         this.world.debug()
     }
 
@@ -14,7 +14,7 @@ class HelloWorld extends Scene2D {
     }
 
     onCreate() {
-
+        this.features.register('debugger', Debugger)
     }
 
     onDestroy() {

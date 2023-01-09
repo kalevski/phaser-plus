@@ -49,7 +49,7 @@ class ProjectInit extends Command {
                 start: 'phaserplus project start',
                 build: 'phaserplus project build'
             },
-            dependencies: ['phaser', '@phaser-plus/core', '@phaser-plus/debugger'],
+            dependencies: ['phaser', '@phaser-plus/core'],
             devDependencies: ['parcel', '@phaser-plus/cli']
         }, message => this.logger.info(message))
 

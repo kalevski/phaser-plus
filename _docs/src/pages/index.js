@@ -27,11 +27,10 @@ export default function Home() {
             <main>
                 <WideCodeBlock />
                 <Features list={[
-                    { title: 'Game flow', description: 'An API attached to the scene for managing game events', image_url: '/img/icons/icon_game_flow.png', image_alt: 'Phaser+ game flow' },
-                    { title: 'Perspective 2D', description: 'Create isometric or any other kind of linear transformation easily', image_url: '/img/icons/icon_perspective.png', image_alt: 'Phaser+ Perspective2D'  },
-                    { title: 'Features', description: 'Phaser+ provides an API for creating reusable features for your games', image_url: '/img/icons/icon_features.png', image_alt: 'Phaser+ Features'  },
-                    // { title: 'Layers', description: 'Separate your game world from game UI using Layers', image_url: '/img/icons/icon_layers.png', image_alt: 'Phaser+ game flow'  },
-                    { title: 'Debug', description: 'Inspect game objects, change properties or fire game events while testing the game', image_url: '/img/icons/icon_debug.png', image_alt: 'Phaser+ game flow'  }
+                    { title: 'Game flow', description: 'Separate your game logic into game events and chain them using game flow API.', image_url: '/img/icons/icon_game_flow.png', image_alt: 'Phaser+ game flow' },
+                    { title: 'Perspective 2D', description: 'Create a linearly transformed grid and place your scene objects on it easily. Good for isometric games.', image_url: '/img/icons/icon_perspective.png', image_alt: 'Phaser+ Perspective2D'  },
+                    { title: 'Features', description: 'Easily reuse features from one game to another using the Feature API.', image_url: '/img/icons/icon_features.png', image_alt: 'Phaser+ Features'  },
+                    { title: 'Debug', description: 'Inspect game objects, change properties, or fire game events while testing the game.', image_url: '/img/icons/icon_debug.png', image_alt: 'Phaser+ game flow'  }
                 ]} />
             </main>
         </Layout>
