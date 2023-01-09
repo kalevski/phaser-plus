@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_phaser_plus_docs=self.webpackChunk_phaser_plus_docs||[]).push([[7717],{1053:e=>{e.exports=JSON.parse('{"title":"Guide","slug":"/category/guide","permalink":"/docs/category/guide","navigation":{"previous":{"title":"Versions","permalink":"/docs/versions"},"next":{"title":"Project structure","permalink":"/docs/guide/project-structure"}}}')}}]);
