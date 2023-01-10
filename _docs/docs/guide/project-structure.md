@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Project structure
 
-Proposed folder structure for large game projects:
+Proposed folder structure for large game projects
 
 Phaser does not enforce any particular pattern for writing complex applications, so developers are free to choose the design pattern that works best for them. There is no "best project architecture" that will fit every project and coding style, but it is always important to structure your project in a logical and organized manner.
 
@@ -19,8 +19,8 @@ The following is a proposed folder structure that may work well in many cases, b
    ├─ config.js - phaser config file
    ├─ scenes - directory for the scenes of the game
    ├─ features - directory used to store game features
-   ├─ prefabs - directory for all your game objects
-   ├─ services - integrate external services inside this directory
+   ├─ prefabs - directory for all your game object classes
+   ├─ services - classes for integration of external services
    └─ events - separate all game events into dedicated classes inside this directory
  ─ package.json
 ```

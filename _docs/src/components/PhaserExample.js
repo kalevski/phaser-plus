@@ -19,6 +19,9 @@ class PhaserExample extends Component {
         this.game = new Game({
             type: AUTO,
             parent: 'game_canvas',
+            loader: {
+                baseURL: '/img'
+            },
             scale: {
                 mode: Scale.FIT,
                 autoCenter: Scale.CENTER_BOTH,

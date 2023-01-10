@@ -86,6 +86,9 @@ class World extends Layer {
     set projection(matrix) {
         this._projection.setValues(matrix.v00, matrix.v01, matrix.v10, matrix.v11)
         this.depth.setup()
+        this.list.forEach(object => {
+            object.setTransform(object.transform.x, object.transform.y)
+        })
         if (this.grid.visible) {
             this.gridUpdate = true
         }

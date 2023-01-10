@@ -1,6 +1,6 @@
 {
     "name": "@phaser-plus/perspective2d",
-    "version": "0.1.2",
+    "version": "0.1.4",
     "description": "Create games with a linearly transformed projection",
     "source": "src/main.js",
     "main": "lib/main.js",

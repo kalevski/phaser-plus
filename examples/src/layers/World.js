@@ -1,6 +1,6 @@
-import { GameObject, Layer } from '@phaser-plus/core'
+import { Layer } from '@phaser-plus/core'
 
-class LayerUI extends Layer {
+class World extends Layer {
 
     /**
      * 
@@ -27,4 +27,4 @@ class LayerUI extends Layer {
 
 }
 
-export default LayerUI
+export default World

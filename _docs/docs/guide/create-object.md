@@ -41,9 +41,30 @@ class MyGameObject extends GameObject {
 
 export default MyGameObject
 ```
+:::note
+**GameObject** lifecycle moethds are invoked if the **GameObject** is added as a child of another GameObject or **Layer**, To learn more about layers go to [next guide](/docs/guide/scene-layers).
+:::
 
-[![Check example](https://img.shields.io/badge/CHECK_EXAMPLE-blue?style=for-the-badge)](/examples/)
 
 ## Game Object Pool
 
 **@phaser-plus/core#Scene** provides pool API for managing game object instances.
+A game object pool can help boost game performance and reduce the workload on the garbage collector.
+
+To use the Game Object Pool, you first need to register the **GameObject**. This can be done by executing:
+```js
+this.pool.register('my-game-object', MyGameObject)
+```
+
+After registration, you can use the **obtain** method to get an object from the pool.
+
+```js
+let myGameObject = this.pool.obtain('my-game-object') // returns instance of MyGameObject 
+```
+
+When you need to remove a game object from the scene, simply remove it from the parent container and execute:
+```js
+this.pool.release(myGameObject)
+```
+
+[![Check example](https://img.shields.io/badge/CHECK_EXAMPLE-blue?style=for-the-badge)](/examples/run?demo=create-game-objects)

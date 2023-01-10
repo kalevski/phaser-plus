@@ -64,6 +64,11 @@ const config = {
                     label: 'Docs',
                 },
                 {
+                    to: 'blog',
+                    label: 'Blog',
+                    position: 'right'
+                },
+                {
                     href: 'https://github.com/kalevski/phaser-plus',
                     label: 'GitHub',
                     position: 'right',

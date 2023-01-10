@@ -1,6 +1,6 @@
 {
     "name": "@phaser-plus/debugger",
-    "version": "0.1.2",
+    "version": "0.1.4",
     "description": "Debugger for PhaserJS games",
     "source": "src/main.js",
     "main": "lib/main.js",

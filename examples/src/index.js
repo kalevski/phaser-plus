@@ -1,5 +1,5 @@
 import { AUTO, Core, Game, Scale } from 'phaser'
-import { getScene } from './main'
+import { getAllScenes, getScene } from './main'
 
 /** @type {Core.Config} */
 const config = {
@@ -33,6 +33,16 @@ if (entry !== null) {
     game.scene.start('default')
 }
 
+let select = document.getElementById('example-select')
 
-
+select.onchange = () => {
+    window.location.replace(`/?scene=${select.value}`)
+}
+getAllScenes().forEach(entry => {
+    let option = document.createElement('option')
+    option.value = entry.slug
+    option.innerText = entry.title
+    select.append(option)
+})
+select.value = entry.slug
 

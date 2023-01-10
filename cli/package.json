@@ -1,6 +1,6 @@
 {
     "name": "@phaser-plus/cli",
-    "version": "0.1.2",
+    "version": "0.1.4",
     "description": "CLI tools for developing Phaser game",
     "main": "src/index.js",
     "bin": {
@@ -8,7 +8,8 @@
     },
     "scripts": {
         "dev": "nodemon -e js -w src --exec \"npm run build\"",
-        "build": "parcel build --log-level info --target cli"
+        "build": "npm run build:lib",
+        "build:lib": "parcel build --log-level info --target cli"
     },
     "targets": {
         "cli": {

@@ -6,8 +6,21 @@ import { createPackageJSON } from '../utils/npm'
 import * as templates from '../utils/templates'
 
 const TEMPLATE_LIST = [
-    'browser'
+    'browser',
+    'phaser'
 ]
+
+const DEPENDENCIES = {
+    browser: {
+        production: ['phaser', '@phaser-plus/core'],
+        development: ['parcel', '@phaser-plus/cli']
+    },
+
+    phaser: {
+        production: ['phaser'],
+        development: ['parcel', '@phaser-plus/cli']
+    }
+}
 
 class ProjectInit extends Command {
     
@@ -43,14 +56,16 @@ class ProjectInit extends Command {
         this.logger.info(`📋 path: ${projectPath}`)
         this.logger.info(`📋 template: ${template}`)
 
+
+        let dependencyOptions = DEPENDENCIES[template]
         const packageJSON = createPackageJSON({
             name: projectName,
             scripts: {
                 start: 'phaserplus project start',
                 build: 'phaserplus project build'
             },
-            dependencies: ['phaser', '@phaser-plus/core'],
-            devDependencies: ['parcel', '@phaser-plus/cli']
+            dependencies: dependencyOptions.production,
+            devDependencies: dependencyOptions.development
         }, message => this.logger.info(message))
 
         if (!dirExist) {
@@ -59,7 +74,7 @@ class ProjectInit extends Command {
         }
         this.logger.info(`📁 creating project files`)
         createFile('.gitignore', projectPath, templates.get('template.gitignore'))
-        templates.clone('browser', projectPath)
+        templates.clone(template, projectPath)
         createFile('package.json', projectPath, packageJSON)
         this.logger.info('🏁 done!')
 
