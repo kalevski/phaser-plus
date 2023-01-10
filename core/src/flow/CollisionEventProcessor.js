@@ -42,7 +42,7 @@ class CollisionEventProcessor extends FlowProcessor {
     /** @protected */
     onDestroy() {
         for (let key of this.eventMap.keys()) {
-            this.removeEvent(key)
+            this.remove(key)
         }
     }
 
@@ -51,7 +51,7 @@ class CollisionEventProcessor extends FlowProcessor {
      * @param {string} eventName
      * @param {new CollisionEvent} collisionEventClass 
      */
-    createEvent(eventName, collisionEventClass) {
+    add(eventName, collisionEventClass) {
         if (this.eventMap.has(eventName)) {
             this.logger.warning(`[createEvent] collision event for object ${eventName} is already registered`)
             return this
@@ -70,7 +70,7 @@ class CollisionEventProcessor extends FlowProcessor {
      * 
      * @param {string} eventName 
      */
-    removeEvent(eventName) {
+    remove(eventName) {
         if (this.eventMap.has(eventName)) {
             this.eventMap.get(eventName).onDestroy()
             this.eventMap.delete(eventName)

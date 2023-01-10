@@ -1,6 +1,7 @@
 {
     "name": "@phaser-plus/core",
-    "version": "0.1.1",
+    "version": "0.1.4",
+    "description": "Set of tools and utils built on top of PhaserJS",
     "source": "src/main.js",
     "main": "lib/main.js",
     "module": "lib/module.js",
@@ -10,7 +11,7 @@
         "build": "npm run build:lib",
         "build:lib": "npm run build:src && npm run build:tsd",
         "build:src": "parcel build --no-cache",
-        "build:tsd": "tsc -d --allowJs --types @toolcase/base,@toolcase/logging,phaser --emitDeclarationOnly --target es5 --lib ES2015,DOM,ScriptHost --outDir ./lib src/*.js"
+        "build:tsd": "tsc -d --allowJs --types @toolcase/base,@toolcase/logging,phaser --emitDeclarationOnly --target es5 --lib ES2015,DOM,ScriptHost --outDir ./lib ./src/main.js"
     },
     "dependencies": {
         "md5": "^2.3.0"
@@ -29,6 +30,16 @@
             "optimize": true
         }
     },
+    "directories": {
+        "lib": "lib"
+    },
+    "files": [
+        "lib"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://registry.npmjs.org/"
+    },
     "homepage": "https://phaser-plus.kalevski.dev",
     "keywords": [
         "phaser",
@@ -39,15 +50,8 @@
         "gamedev",
         "browser"
     ],
-    "directories": {
-        "lib": "lib"
-    },
-    "files": [
-        "lib"
-    ],
-    "publishConfig": {
-        "access": "public",
-        "registry": "https://registry.npmjs.org/"
+    "author": {
+        "name": "kalevski"
     },
     "repository": {
         "type": "git",

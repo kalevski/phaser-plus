@@ -24,11 +24,17 @@ class TimeEvent {
         this.flow = this.scene.flow
     }
 
+    /** @protected */
+    onCreate() {}
+
     /**
      * @protected
      * @param {number} times 
      */
     onFire(times) {}
+
+    /** @protected */
+    onDestroy() {}
 
     get type() {
         return 'time_event'

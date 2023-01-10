@@ -5,6 +5,8 @@ node_modules
 examples/public/*.js
 examples/public/*.js.map
 examples/public/*.html
+examples/public/*.css
+examples/public/*.css.map
 
 **/*:Zone.Identifier
 

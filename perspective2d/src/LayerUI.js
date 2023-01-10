@@ -1,24 +1,28 @@
-import { Layer } from '@phaser-plus/core'
+import { GameObject, Layer } from '@phaser-plus/core'
 
 class LayerUI extends Layer {
 
-    /** @protected */
-    onCreate() {
-        super.onCreate()
+    /**
+     * 
+     * @param {string} key 
+     * @param {number} x 
+     * @param {number} y 
+     */
+    add(key, x, y) {
+        let object = this.scene.pool.obtain(key)
+        object.setPosition(x, y)
+        this.container.add(object)
+        return this
     }
 
     /**
-     * @protected
-     * @param {number} time 
-     * @param {number} delta 
+     * 
+     * @param {GameObject} object 
      */
-    onUpdate(time, delta) {
-        super.onUpdate(time, delta)
-    }
-
-    /** @protected */
-    onDestroy() {
-        super.onDestroy()
+    remove(object) {
+        this.container.remove(object)
+        this.scene.pool.release(object)
+        return this
     }
 
 }

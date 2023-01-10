@@ -1,14 +1,15 @@
 {
     "name": "@phaser-plus/cli",
-    "version": "0.1.1",
-    "description": "CLI tools for AirConsole game development",
+    "version": "0.1.4",
+    "description": "CLI tools for developing Phaser game",
     "main": "src/index.js",
     "bin": {
         "phaserplus": "bin/cli.js"
     },
     "scripts": {
         "dev": "nodemon -e js -w src --exec \"npm run build\"",
-        "build": "parcel build --log-level info --target cli"
+        "build": "npm run build:lib",
+        "build:lib": "parcel build --log-level info --target cli"
     },
     "targets": {
         "cli": {
@@ -33,17 +34,26 @@
         "access": "public",
         "registry": "https://registry.npmjs.org/"
     },
+    "homepage": "https://phaser-plus.kalevski.dev",
+    "keywords": [
+        "phaser",
+        "phaser3",
+        "utilities",
+        "games",
+        "html5",
+        "gamedev",
+        "browser"
+    ],
+    "author": {
+        "name": "kalevski"
+    },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/kalevski/airconsole-cli.git"
+        "url": "git+https://github.com/kalevski/phaser-plus.git"
     },
-    "keywords": [
-        "phaser-plus",
-        "dev",
-        "tools",
-        "cli"
-    ],
-    "author": "Daniel Kalevski",
+    "bugs": {
+        "url": "https://github.com/kalevski/phaser-plus/issues"
+    },
     "license": "MIT",
     "devDependencies": {
         "commander": "^9.5.0",

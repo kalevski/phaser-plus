@@ -7,7 +7,7 @@ import ProjectStart from './commands/ProjectStart'
 
 const cli = new Command()
 
-cli.version('0.1.0', '-v --version')
+cli.version('0.1.3', '-v --version')
 
 cli.addCommand(new ProjectInit('init'))
 

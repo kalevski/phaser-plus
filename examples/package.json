@@ -11,7 +11,7 @@
         "build": "npm run build:lib",
         "build:lib": "npm run build:src && npm run build:tsd",
         "build:src": "parcel build --no-cache",
-        "build:tsd": "tsc -d --allowJs --types @toolcase/base,@toolcase/logging,phaser --emitDeclarationOnly --target es5 --lib ES2015,DOM,ScriptHost --outDir ./lib src/*.js"
+        "build:tsd": "tsc -d --allowJs --types @toolcase/base,@toolcase/logging,phaser --emitDeclarationOnly --target es5 --lib ES2015,DOM,ScriptHost --outDir ./lib ./src/main.js"
     },
     "peerDependencies": {
         "phaser": "3.x",

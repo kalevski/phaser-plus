@@ -1,24 +1,27 @@
-import { Scene2D } from '@phaser-plus/perspective2d'
-import { Debugger } from '@phaser-plus/debugger'
-import { Structs } from '@phaser-plus/core'
+import { Scene } from '@phaser-plus/core'
 
-class HelloWorld extends Scene2D {
+class HelloWorld extends Scene {
 
     onInit() {
-        this.world.projection = Structs.Matrix2.createISO(64)
-        this.world.debug()
+        
     }
 
     onLoad() {
-        
+        this.load.atlas('objects', [ 'assets/objects.png', ], 'assets/objects.json')
     }
 
     onCreate() {
-        this.features.register('debugger', Debugger)
+        const { width, height } = this.game.config
+
+        this.add.image(width / 2, height / 2, 'objects', 'circle_green')
+
+        this.add.text(width / 2, height / 2 + 200, 'Welcome to Phaser+ Examples')
+            .setOrigin(.5)
+            .setFontSize(36)
     }
 
     onDestroy() {
-        
+        // invoked if you change scene using this.goTo('--key of your next scene--')
     }
 
 }

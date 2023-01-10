@@ -25,10 +25,16 @@ class CollisionEvent {
     }
 
     /** @protected */
+    onCreate() {}
+
+    /** @protected */
     onEnter(bodyA, bodyB, event) {}
 
     /** @protected */
     onExit(bodyA, bodyB, event) {}
+
+    /** @protected */
+    onDestroy() {}
 
     get type() {
         return 'collision_event'
