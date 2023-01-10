@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkphaser_plus_docs=self.webpackChunkphaser_plus_docs||[]).push([[74],{7217:s=>{s.exports=JSON.parse('{"label":"tutorial","permalink":"/blog/tags/tutorial","allTagsPath":"/blog/tags","count":1}')}}]);
