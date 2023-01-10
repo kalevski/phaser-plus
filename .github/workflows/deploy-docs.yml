@@ -23,7 +23,7 @@ jobs:
 
       - name: Install docs dependencies
         working-directory: ./_docs
-        run: run: npm install --frozen-lockfile
+        run: npm install --frozen-lockfile
 
       - name: Build website
         working-directory: ./_docs
