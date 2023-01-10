@@ -10,8 +10,7 @@
         "perspective2d",
         "debugger",
         "examples",
-        "cli",
-        "_docs"
+        "cli"
     ],
     "devDependencies": {
         "@toolcase/base": "^0.18.24",
