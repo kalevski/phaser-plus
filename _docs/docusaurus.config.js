@@ -32,6 +32,11 @@ const config = {
                     sidebarPath: require.resolve('./sidebars.js'),
                     editUrl: 'https://github.com/kalevski/phaser-plus/tree/main/_docs/',
                 },
+                blog: {
+                    showReadingTime: true,
+                    // Please change this to your repo.
+                    // Remove this to remove the "edit this page" links.
+                },
                 theme: {
                     customCss: require.resolve('./src/css/custom.css'),
                 },
@@ -41,7 +46,6 @@ const config = {
             }),
         ],
     ],
-    themes: ['@docusaurus/theme-live-codeblock'],
     themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -64,7 +68,7 @@ const config = {
                     label: 'Docs',
                 },
                 {
-                    to: 'blog',
+                    to: '/blog',
                     label: 'Blog',
                     position: 'right'
                 },
