@@ -1,6 +1,6 @@
 {
     "name": "@phaser-plus/debugger",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "description": "Debugger for PhaserJS games",
     "source": "src/main.js",
     "main": "lib/main.js",
@@ -19,7 +19,7 @@
     },
     "peerDependencies": {
         "phaser": "3.x",
-        "@toolcase/base": "0.x",
+        "@toolcase/base": "1.x",
         "@toolcase/logging": "0.x",
         "@phaser-plus/core": "0.x"
     },

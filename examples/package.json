@@ -15,7 +15,7 @@
     },
     "peerDependencies": {
         "phaser": "3.x",
-        "@toolcase/base": "0.x",
+        "@toolcase/base": "1.x",
         "@toolcase/logging": "0.x",
         "@phaser-plus/core": "0.x",
         "@phaser-plus/debugger": "0.x",
