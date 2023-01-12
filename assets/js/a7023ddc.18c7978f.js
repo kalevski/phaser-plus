@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkphaser_plus_docs=self.webpackChunkphaser_plus_docs||[]).push([[713],{3457:l=>{l.exports=JSON.parse('[{"label":"tutorial","permalink":"/blog/tags/tutorial","count":1},{"label":"devlog","permalink":"/blog/tags/devlog","count":1}]')}}]);
