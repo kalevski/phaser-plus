@@ -6,6 +6,7 @@ import Debugging from './Debugging'
 import GameEvents from './GameEvents'
 import HelloWorld from './HelloWorld'
 import ISOScene from './ISOScene'
+import ObjectPooling from './ObjectPooling'
 import SceneLayers from './SceneLayers'
 import TimeEvents from './TimeEvents'
 
@@ -105,7 +106,16 @@ const scenes = [
         imageUrl: 'https://user-images.githubusercontent.com/10467454/211659097-2424c5eb-423c-4779-8e46-0d262eefeac3.jpg',
         imageAlt: 'Phaser Plus example - Isometric Scene',
         sceneClass: ISOScene
-    }
+    },
+    {
+        slug: 'object-pooling',
+        title: 'Object Pooling',
+        sceneFile: 'ObjectPooling.js',
+        description: '',
+        imageUrl: 'https://user-images.githubusercontent.com/10467454/211659097-2424c5eb-423c-4779-8e46-0d262eefeac3.jpg',
+        imageAlt: 'Phaser Plus example - Object Pooling',
+        sceneClass: ObjectPooling
+    },
 ]
 
 export default scenes
