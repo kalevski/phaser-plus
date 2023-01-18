@@ -1,9 +1,9 @@
 import express from 'express'
+import cors from 'cors'
 import concurrently from 'concurrently'
 import { Color } from '@toolcase/base'
 import { logging } from '@toolcase/logging'
 import { Command } from 'commander'
-import fs from 'fs'
 import path from 'path'
 import { deleteFile, getPath, isDirectoryEmpty } from '../utils/files'
 import { getMachineIP } from '../utils/network'
@@ -82,8 +82,8 @@ class ProjectStart extends Command {
         let ip = getMachineIP()
         let url = `http://${ip}:${serverPort}`
         
-        
-        server.use(express.static(publicPath))
+        server.use(cors())
+        server.use('/', express.static(publicPath))
         server.listen(serverPort, '0.0.0.0', () => {
             this.logger.info(`🌐 server started: \x1b[33m ${url} \x1b[0m`)
             entrypoints.filter(file => path.extname(file) === '.html' && file !== 'index.html').forEach(file => {
