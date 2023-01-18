@@ -1,6 +1,6 @@
 {
     "name": "@phaser-plus/cli",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "description": "CLI tools for developing Phaser game",
     "main": "src/index.js",
     "bin": {
@@ -18,10 +18,10 @@
             "optimize": true,
             "scopeHoist": false,
             "engines": {
-            "node": ">= 16"
-        },
-        "includeNodeModules": true,
-        "sourceMap": false
+                "node": ">= 16"
+            },
+            "includeNodeModules": true,
+            "sourceMap": false
         }
     },
     "directories": {
@@ -56,8 +56,9 @@
     },
     "license": "MIT",
     "devDependencies": {
-        "commander": "^9.5.0",
+        "commander": "^10.0.0",
         "concurrently": "^7.6.0",
+        "cors": "^2.8.5",
         "express": "^4.18.2",
         "nodemon": "^2.0.20"
     },
