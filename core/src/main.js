@@ -11,7 +11,10 @@ import GameObject from './GameObject'
 import Feature from './Feature'
 import GameObjectPool from './GameObjectPool'
 import Layer from './Layer'
+import ObjectLayer from './ObjectLayer'
 import HTMLFeature from './HTMLFeature'
+
+import * as Events from './Events'
 
 const Flow = {
     Event,
@@ -26,6 +29,7 @@ const Structs = {
 }
 
 export {
+    Events,
     Flow,
     Structs,
 
@@ -34,5 +38,6 @@ export {
     Feature,
     GameObjectPool,
     Layer,
+    ObjectLayer,
     HTMLFeature
 }

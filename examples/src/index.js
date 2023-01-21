@@ -38,10 +38,13 @@ let select = document.getElementById('example-select')
 select.onchange = () => {
     window.location.replace(`/?scene=${select.value}`)
 }
-getAllScenes().forEach(entry => {
+getAllScenes(false).forEach(entry => {
     let option = document.createElement('option')
     option.value = entry.slug
     option.innerText = entry.title
+    if (!entry.ready) {
+        option.style.background = '#b71c1c'
+    }
     select.append(option)
 })
 select.value = entry.slug

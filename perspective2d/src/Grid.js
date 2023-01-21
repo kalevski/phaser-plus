@@ -2,7 +2,12 @@ import { generateId } from '@toolcase/base'
 import { Cameras, GameObjects, Math as M } from 'phaser'
 import { GameObject, Structs } from '@phaser-plus/core'
 
-class PerspectiveGrid extends GameObject {
+class Grid extends GameObject {
+
+    STYLE = {
+        GRID: 0x59758a,
+        LINES: 0xffffff
+    }
 
     /** @private */
     TEXTURE_KEY = ''
@@ -34,10 +39,18 @@ class PerspectiveGrid extends GameObject {
         this.add(this.gridTile)
     }
 
+    setColors(gridColor, lineColor) {
+        if (typeof gridColor !== 'number' || typeof lineColor !== 'number') {
+            return
+        }
+        this.STYLE.GRID = gridColor
+        this.STYLE.LINES = lineColor
+    }
+
     /** @private */
     setCanvasStyle() {
-        this.canvas.fillStyle(0x59758a, 1)
-        this.canvas.lineStyle(1, 0xffffff, .3)
+        this.canvas.fillStyle(this.STYLE.GRID, 1)
+        this.canvas.lineStyle(1, this.STYLE.LINES, .3)
     }
 
     /** @protected */
@@ -194,4 +207,4 @@ class PerspectiveGrid extends GameObject {
 
 }
 
-export default PerspectiveGrid
+export default Grid

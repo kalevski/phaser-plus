@@ -6,6 +6,7 @@ import Debugging from './Debugging'
 import GameEvents from './GameEvents'
 import HelloWorld from './HelloWorld'
 import ISOScene from './ISOScene'
+import LayerDepth from './LayerDepth'
 import ObjectPooling from './ObjectPooling'
 import SceneLayers from './SceneLayers'
 import TimeEvents from './TimeEvents'
@@ -14,6 +15,7 @@ import TimeEvents from './TimeEvents'
 /**
  * @typedef SceneEntry
  * @property {string} slug
+ * @property {boolean} ready
  * @property {string} title
  * @property {string} sceneFile
  * @property {string} description
@@ -28,6 +30,7 @@ import TimeEvents from './TimeEvents'
 const scenes = [
     {
         slug: 'hello-world',
+        ready: true,
         title: 'Hello World',
         sceneFile: 'HelloWorld.js',
         description: '',
@@ -37,6 +40,7 @@ const scenes = [
     },
     {
         slug: 'create-game-objects',
+        ready: true,
         title: 'Create Game Objects',
         sceneFile: 'CreateGameObjects.js',
         description: '',
@@ -46,6 +50,7 @@ const scenes = [
     },
     {
         slug: 'create-physics-objects',
+        ready: true,
         title: 'Create Physics Objects',
         sceneFile: 'CreatePhysicsObjects.js',
         description: '',
@@ -55,6 +60,7 @@ const scenes = [
     },
     {
         slug: 'scene-layers',
+        ready: true,
         title: 'Scene Layers',
         sceneFile: 'SceneLayers.js',
         description: '',
@@ -64,6 +70,7 @@ const scenes = [
     },
     {
         slug: 'debugging',
+        ready: true,
         title: 'Debugging',
         sceneFile: 'Debugging.js',
         description: '',
@@ -73,6 +80,7 @@ const scenes = [
     },
     {
         slug: 'game-events',
+        ready: true,
         title: 'Game Events',
         sceneFile: 'GameEvents.js',
         description: '',
@@ -82,6 +90,7 @@ const scenes = [
     },
     {
         slug: 'time-events',
+        ready: true,
         title: 'Time Events',
         sceneFile: 'TimeEvents.js',
         description: '',
@@ -91,6 +100,7 @@ const scenes = [
     },
     {
         slug: 'collision-events',
+        ready: true,
         title: 'Collision Events',
         sceneFile: 'CollisionEvents.js',
         description: '',
@@ -100,6 +110,7 @@ const scenes = [
     },
     {
         slug: 'iso-scene',
+        ready: true,
         title: 'Isometric Scene',
         sceneFile: 'ISOScene.js',
         description: '',
@@ -109,6 +120,7 @@ const scenes = [
     },
     {
         slug: 'object-pooling',
+        ready: false,
         title: 'Object Pooling',
         sceneFile: 'ObjectPooling.js',
         description: '',
@@ -116,6 +128,16 @@ const scenes = [
         imageAlt: 'Phaser Plus example - Object Pooling',
         sceneClass: ObjectPooling
     },
+    {
+        slug: 'layer-depth',
+        ready: false,
+        title: 'Layers & Depth',
+        sceneFile: 'LayerDepth.js',
+        description: '',
+        imageUrl: '',
+        imageAlt: 'Phaser Plus example - Layers & Depth',
+        sceneClass: LayerDepth
+    }
 ]
 
 export default scenes

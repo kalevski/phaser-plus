@@ -12,8 +12,12 @@ const getScene = (slug) => {
 /**
  * @returns {Array<import('./scenes').SceneEntry>}
  */
-const getAllScenes = () => {
-    return scenes
+const getAllScenes = (filtered = true) => {
+    if (filtered) {
+        return scenes.filter(scene => scene.ready)
+    } else {
+        return scenes
+    }
 }
 
 export {

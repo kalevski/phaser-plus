@@ -1,13 +1,19 @@
 import { Scene, Layer, Structs } from '@phaser-plus/core'
 import GameObject2D from './GameObject2D'
-import DepthOrder from './DepthOrder'
-import PerspectiveGrid from './PerspectiveGrid'
+import DepthSort from './DepthSort'
+import Grid from './Grid'
+
+/**
+ * @typedef GridColors
+ * @property {number} background
+ * @property {number} lines
+ */
 
 class World extends Layer {
 
     /**
      * @private
-     * @type {PerspectiveGrid}
+     * @type {Grid}
      */
     grid = null
 
@@ -20,11 +26,12 @@ class World extends Layer {
      */
     _projection = Structs.Matrix2.create(50, 50)
 
-    depth = new DepthOrder()
+    sort = new DepthSort()
 
     /** @protected */
     onCreate() {
-        this.grid = new PerspectiveGrid(this.scene, 0, 0)
+        this.grid = new Grid(this.scene, 0, 0)
+        this.grid.depth = -Number.MAX_SAFE_INTEGER
         this.scene.add.existing(this.grid)
         this.grid.onCreate()
         this.grid.setScrollFactor(0)
@@ -49,7 +56,7 @@ class World extends Layer {
             }
             this.gridUpdate = null
         }
-        this.container.list.sort(this.depth.fn)
+        this.container.list.sort(this.sort.fn)
 
         if (typeof this.scene.matter !== 'undefined') {
             if (typeof this.scene.matter.world.debugGraphic !== 'undefined') {
@@ -66,8 +73,12 @@ class World extends Layer {
     /**
      * 
      * @param {boolean} flag 
+     * @param {GridColors} [colors]
      */
-    debug(flag = true) {
+    debug(flag = true, colors = {}) {
+        if (typeof colors === 'object') {
+            this.grid.setColors(colors.background, colors.lines)
+        }
         if (typeof flag !== 'boolean') {
             return this
         }
@@ -85,7 +96,7 @@ class World extends Layer {
      */
     set projection(matrix) {
         this._projection.setValues(matrix.v00, matrix.v01, matrix.v10, matrix.v11)
-        this.depth.setup()
+        this.sort.setup()
         this.list.forEach(object => {
             object.setTransform(object.transform.x, object.transform.y)
         })

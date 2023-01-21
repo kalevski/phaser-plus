@@ -1,6 +1,7 @@
-import { GameObject, Layer } from '@phaser-plus/core'
+import GameObject from './GameObject'
+import Layer from './Layer'
 
-class LayerUI extends Layer {
+class ObjectLayer extends Layer {
 
     /**
      * 
@@ -12,7 +13,7 @@ class LayerUI extends Layer {
         let object = this.scene.pool.obtain(key)
         object.setPosition(x, y)
         this.container.add(object)
-        return this
+        return object
     }
 
     /**
@@ -27,4 +28,4 @@ class LayerUI extends Layer {
 
 }
 
-export default LayerUI
+export default ObjectLayer

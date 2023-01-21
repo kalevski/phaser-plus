@@ -7,7 +7,7 @@ import GameObject2D from './GameObject2D'
  * @returns {number}
  */
 
-class DepthOrder {
+class DepthSort {
 
     /**
      * @private
@@ -40,6 +40,10 @@ class DepthOrder {
      * @type {SortFn}
      */
     normalSort = (objectA, objectB) => {
+        let depth = objectA.depth - objectB.depth
+        if (depth !== 0) {
+            return depth
+        }
         let orderY = objectA.pivot.y - objectB.pivot.y
         if (orderY !== 0) {
             return orderY
@@ -52,6 +56,10 @@ class DepthOrder {
      * @type {SortFn}
      */
     inverseXSort = (objectA, objectB) => {
+        let depth = objectA.depth - objectB.depth
+        if (depth !== 0) {
+            return depth
+        }
         let orderY = objectA.pivot.y - objectB.pivot.y
         if (orderY !== 0) {
             return orderY
@@ -64,6 +72,10 @@ class DepthOrder {
      * @type {SortFn}
      */
     inverseYSort = (objectA, objectB) => {
+        let depth = objectA.depth - objectB.depth
+        if (depth !== 0) {
+            return depth
+        }
         let orderY = objectB.pivot.y - objectA.pivot.y
         if (orderY !== 0) {
             return orderY
@@ -76,6 +88,10 @@ class DepthOrder {
      * @type {SortFn}
      */
     inverseSort = (objectA, objectB) => {
+        let depth = objectA.depth - objectB.depth
+        if (depth !== 0) {
+            return depth
+        }
         let orderY = objectB.pivot.y - objectA.pivot.y
         if (orderY !== 0) {
             return orderY
@@ -95,4 +111,4 @@ class DepthOrder {
 
 }
 
-export default DepthOrder
+export default DepthSort

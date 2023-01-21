@@ -40,7 +40,7 @@ class ISOScene extends Scene2D {
         this.world.add('barrel', 1, -1).setName('barrel3')
         this.world.add('barrel', 1, 1).setName('barrel4')
 
-        this.world.depth.set()
+        this.world.sort.set()
 
         // function executed after 5 seconds
         this.flow.events.triggerFn(() => {

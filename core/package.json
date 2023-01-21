@@ -1,6 +1,6 @@
 {
     "name": "@phaser-plus/core",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "description": "Set of tools and utils built on top of PhaserJS",
     "source": "src/main.js",
     "main": "lib/main.js",
