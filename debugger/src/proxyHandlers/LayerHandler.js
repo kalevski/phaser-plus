@@ -2,7 +2,7 @@ import { Layer } from '@phaser-plus/core'
 import ProxyHandler from './ProxyHandler'
 
 /**
- * @extends {ProxyHandler<Layer>}
+ * @augments ProxyHandler<Layer>
  */
 class CameraPositionHandler extends ProxyHandler {
 
@@ -57,7 +57,7 @@ class CameraPositionHandler extends ProxyHandler {
 }
 
 /**
- * @extends {ProxyHandler<Layer>}
+ * @augments ProxyHandler<Layer>
  */
 class LayerHandler extends ProxyHandler {
 

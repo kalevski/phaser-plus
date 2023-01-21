@@ -104,7 +104,7 @@ class GameObjectTransform extends ProxyHandler {
 }
 
 /**
- * @extends {ProxyHandler<GameObject>}
+ * @augments ProxyHandler<GameObject>
  */
 class GameObjectHandler extends ProxyHandler {
 
