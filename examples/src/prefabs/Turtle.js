@@ -9,6 +9,7 @@ class Turtle extends GameObject {
     onCreate() {
         this.base = this.scene.add.sprite(0, 0, 'objects', 'turtle_left')
             .setVisible(false)
+            .setInteractive()
         this.add(this.base)
         this.scene.matter.add.gameObject(this)
         this.setBody({
@@ -18,7 +19,7 @@ class Turtle extends GameObject {
         }, {
             isStatic: false,
             isSensor: false,
-            label: 'turtle'
+            label: 'turtle',
         })
 
         this.scene.matter.world.remove(this.body)

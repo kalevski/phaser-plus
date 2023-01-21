@@ -1,5 +1,6 @@
 import { generateId } from '@toolcase/base'
 import { GameObjects, Time } from 'phaser'
+import { LAYER_DEPTH_UPDATE } from './Events'
 import Feature from './Feature'
 import GameObject from './GameObject'
 
@@ -9,7 +10,6 @@ class Layer extends Feature {
     CAMERA_NAME = generateId(16)
 
     /**
-     * @protected
      * @type {GameObject}
      */
     container = null
@@ -50,6 +50,19 @@ class Layer extends Feature {
 
     get visible() {
         return this.container.visible
+    }
+
+    set depth(value) {
+        if (typeof value !== 'number') {
+            throw new Error('layer depth value must be a number')
+        }
+        this.camera.depth = value
+        this.container.setDepth(value)
+        this.emit(LAYER_DEPTH_UPDATE)
+    }
+
+    get depth() {
+        return this.camera.depth || 0
     }
 
     /**

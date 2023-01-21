@@ -1,12 +1,11 @@
-import { Scene } from '@phaser-plus/core'
+import { ObjectLayer, Scene } from '@phaser-plus/core'
 import World from './World'
-import LayerUI from './LayerUI'
 
 class Scene2D extends Scene {
 
     /**
      * @protected
-     * @type {LayerUI}
+     * @type {ObjectLayer}
      */
     ui = null
 
@@ -22,7 +21,7 @@ class Scene2D extends Scene {
      */
     beforeInit() {
         this.world = this.features.register('world', World)
-        this.ui = this.features.register('ui', LayerUI)
+        this.ui = this.features.register('ui', ObjectLayer)
     }
 
 }

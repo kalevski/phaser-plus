@@ -8,6 +8,10 @@ class ObjectPooling extends Scene {
     /** @type {World} */
     world = null
 
+    instances = 1
+
+    scoreText = 'number of turtle objects: '
+
     onLoad() {
         this.load.atlas('objects', [ 'assets/objects.png', ], 'assets/objects.json')
     }
@@ -18,27 +22,29 @@ class ObjectPooling extends Scene {
 
         this.pool.register('turtle', Turtle)
 
+        this.text = this.add.text(350, 0, `${this.scoreText} ${this.instances}`, { font: '16px Courier', fill: '#00ff00' });
+
         // check layer implementation [https://github.com/kalevski/phaser-plus/tree/main/examples/src/layers/World.js]
         this.world = this.features.register('world', World)
 
         this.world.add('turtle', 0, -200)
         
-        this.input.on('pointerup', this.mouseClick, this)
+        this.input.mouse.disableContextMenu();
+        this.input.on('pointerdown', this.mouseClick, this)
         
     }
 
     mouseClick(event, objects) {
-        // TODO: Change leftButtonDown to rightButtonDown if getDuration is not working
-        //       Fix remove object, since right click is not working and it shows right click menu
-        // if(event.rightButtonDown()) {
-        if(event.leftButtonDown() && event.getDuration() > 500) {
-            let [ turtle = null ] = objects
-            if(turtle !== null) {
-                debugger
-                this.world.remove(turtle)
-            }
-        } else {
+        //TODO: show also the actual object created in phaser, so we can compare between actual object and ones that are visible
+        let [ turtle = null ] = objects
+        if(event.leftButtonDown()) {
             this.world.add('turtle', event.worldX, event.worldY)
+            this.text.setText(`${this.scoreText} ${++this.instances}`)
+            
+        } else if(event.rightButtonDown() && turtle !== null){
+            this.world.remove(turtle)
+            this.instances--
+            this.text.setText(`${this.scoreText} ${++this.instances}`)
         }
     }
 }

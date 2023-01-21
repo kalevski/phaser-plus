@@ -6,6 +6,7 @@ import FeatureRegistry from './FeatureRegistry'
 import ServiceRegistry from './ServiceRegistry'
 import GameObjectPool from './GameObjectPool'
 import FlowEngine from './flow/FlowEngine'
+import { LAYER_DEPTH_UPDATE } from './Events'
 
 class Scene extends PhaserScene {
 
@@ -38,7 +39,10 @@ class Scene extends PhaserScene {
      * @protected
      * @type {Logger}
      */
-     logger = null
+    logger = null
+
+    /** @private */
+    layerSortFlag = false
 
     /** @protected */
     onInit() {}
@@ -89,6 +93,8 @@ class Scene extends PhaserScene {
         this.flow = new FlowEngine(this)
         this.logger.info('initialized')
 
+        this.features.on(LAYER_DEPTH_UPDATE, this.onLayerDepthUpdate, this)
+
         this.beforeInit()
         this.onInit()
     }
@@ -109,6 +115,9 @@ class Scene extends PhaserScene {
      * @param {number} delta 
      */
     update(time, delta) {
+        if (this.layerSortFlag) {
+            this.cameras.cameras.sort(this.compareCamerasFn)
+        }
         this.features.doUpdate(time, delta)
         for (let children of this.children.list) {
             if (children instanceof GameObject) {
@@ -119,7 +128,19 @@ class Scene extends PhaserScene {
     }
 
     /** @private */
+    onLayerDepthUpdate() {
+        this.layerSortFlag = true
+    }
+
+    /** @private */
+    compareCamerasFn(cameraA, cameraB) {
+        return (cameraA.depth || 0) - (cameraB.depth || 0)
+    }
+
+    /** @private */
     doDestroy() {
+        this.features.off(LAYER_DEPTH_UPDATE, this.onLayerDepthUpdate, this)
+
         this.onDestroy()
         this.features.destroyAll()
         this.flow.destroy()
