@@ -18,6 +18,7 @@ class Debugging extends Scene {
 
     onInit() {
         this.features.register('debugger', Debugger)
+            .setExpanded()
     }
 
     onLoad() {

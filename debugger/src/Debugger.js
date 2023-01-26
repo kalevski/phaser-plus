@@ -44,7 +44,8 @@ class Debugger extends HTMLFeature {
      */
     onCreate() {
         this.pane = new Pane({
-            title: 'Debugger'
+            title: 'Debugger',
+            expanded: false
         })
         this.pane.registerPlugin(EssentialsPlugin)
         this.panels.inspector = new InspectorPanel(this.scene, this.pane)
@@ -163,6 +164,14 @@ class Debugger extends HTMLFeature {
      */
     getPanel(key) {
         return this.panels[key] || null
+    }
+
+    setExpanded(flag = true) {
+        if (typeof flag !== 'boolean') {
+            return this
+        }
+        this.pane.expanded = flag
+        return this
     }
 
 }
