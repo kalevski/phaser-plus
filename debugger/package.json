@@ -14,7 +14,7 @@
         "build:tsd": "tsc -d --allowJs --types @toolcase/base,@toolcase/logging,phaser --emitDeclarationOnly --target es5 --lib ES2015,DOM,ScriptHost --outDir ./lib ./src/main.js"
     },
     "dependencies": {
-        "@tweakpane/plugin-essentials": "^0.1.7",
+        "@tweakpane/plugin-essentials": "^0.1.8",
         "tweakpane": "^3.1.4"
     },
     "peerDependencies": {
