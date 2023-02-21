@@ -10,7 +10,9 @@ class ObjectPooling extends Scene {
 
     instances = 1
 
-    scoreText = 'number of turtle objects: '
+    visibleTurtlesText = 'Number of visible turtle objects: '
+
+    actualTurtlesText = 'Number of actual turtle objects: '
 
     onLoad() {
         this.load.atlas('objects', [ 'assets/objects.png', ], 'assets/objects.json')
@@ -22,7 +24,8 @@ class ObjectPooling extends Scene {
 
         this.pool.register('turtle', Turtle)
 
-        this.text = this.add.text(350, 0, `${this.scoreText} ${this.instances}`, { font: '16px Courier', fill: '#00ff00' });
+        this.visibleInstancesText = this.add.text(250, 0, `${this.visibleTurtlesText} ${this.instances}`, { font: '16px Courier', fill: '#00ff00' })
+        this.actualInstancesText = this.add.text(250, 50, `${this.actualTurtlesText} 1`, { font: '16px Courier', fill: '#00ff00' })
 
         // check layer implementation [https://github.com/kalevski/phaser-plus/tree/main/examples/src/layers/World.js]
         this.world = this.features.register('world', World)
@@ -37,14 +40,16 @@ class ObjectPooling extends Scene {
     mouseClick(event, objects) {
         //TODO: show also the actual object created in phaser, so we can compare between actual object and ones that are visible
         let [ turtle = null ] = objects
+
+        this.actualInstancesText.setText(`${this.actualTurtlesText} ${this.world.scene.instances}`)
         if(event.leftButtonDown()) {
             this.world.add('turtle', event.worldX, event.worldY)
-            this.text.setText(`${this.scoreText} ${++this.instances}`)
+            this.visibleInstancesText.setText(`${this.visibleTurtlesText} ${++this.instances}`)
             
         } else if(event.rightButtonDown() && turtle !== null){
-            this.world.remove(turtle)
+            this.world.remove(turtle.parentContainer)
             this.instances--
-            this.text.setText(`${this.scoreText} ${++this.instances}`)
+            this.visibleInstancesText.setText(`${this.visibleTurtlesText} ${this.instances}`)
         }
     }
 }

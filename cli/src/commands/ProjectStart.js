@@ -50,7 +50,7 @@ class ProjectStart extends Command {
             let filePath = path.join(relativePath, file)
             let color = this.colors.shift() || Color.DEEP_ORANGE
             return {
-                command: `parcel watch -p ${hrmPort++} --no-cache --dist-dir ${distDir} ${filePath}`,
+                command: `parcel watch -p ${hrmPort++} --dist-dir ${distDir} ${filePath}`,
                 name: file,
                 prefixColor: color,
                 cwd: projectPath
