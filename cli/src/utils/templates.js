@@ -4,7 +4,6 @@ import { copyDirectory, copyFile } from './files'
 
 const get = (name) => {
     const filePath = path.join(__dirname, '../../templates', name)
-    console.log(filePath)
     let exists = fs.existsSync(filePath)
     if (!exists) {
         throw new Error(`template=(${name}) does not exist`)
