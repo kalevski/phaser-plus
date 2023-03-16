@@ -1,4 +1,5 @@
 import { GameObject2D } from '@phaser-plus/perspective2d'
+import { GameObjects } from 'phaser'
 
 class Barrel2D extends GameObject2D {
     
@@ -6,6 +7,7 @@ class Barrel2D extends GameObject2D {
     stand = null
 
     /** @type {GameObjects.Sprite} */
+
     barrel = null
     
     onCreate() {
