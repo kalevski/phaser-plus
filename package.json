@@ -15,7 +15,7 @@
     "devDependencies": {
         "@toolcase/base": "^1.0.9",
         "@toolcase/logging": "^0.3.12",
-        "@tweakpane/core": "^1.1.4",
+        "@tweakpane/core": "^1.1.5",
         "nodemon": "^2.0.21",
         "parcel": "^2.8.3",
         "phaser": "^3.55.2",
