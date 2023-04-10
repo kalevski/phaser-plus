@@ -5,7 +5,7 @@
  * @license  MIT
  */
 
-/*! Tweakpane 3.1.6 (c) 2016 cocopon, licensed under the MIT license. */
+/*! Tweakpane 3.1.7 (c) 2016 cocopon, licensed under the MIT license. */
 
 /**
  * @author       Florian Vazelle
