@@ -57,10 +57,10 @@
     "license": "MIT",
     "devDependencies": {
         "commander": "^10.0.0",
-        "concurrently": "^7.6.0",
+        "concurrently": "^8.0.1",
         "cors": "^2.8.5",
         "express": "^4.18.2",
-        "nodemon": "^2.0.20"
+        "nodemon": "^2.0.21"
     },
     "peerDependencies": {
         "parcel": "2.x"

@@ -5,6 +5,7 @@ import CreatePhysicsObjects from './CreatePhysicsObjects'
 import Debugging from './Debugging'
 import GameEvents from './GameEvents'
 import HelloWorld from './HelloWorld'
+import ISOMovement from './ISOMovement'
 import ISOScene from './ISOScene'
 import LayerDepth from './LayerDepth'
 import ObjectPooling from './ObjectPooling'
@@ -117,6 +118,16 @@ const scenes = [
         imageUrl: 'https://user-images.githubusercontent.com/10467454/211659097-2424c5eb-423c-4779-8e46-0d262eefeac3.jpg',
         imageAlt: 'Phaser Plus example - Isometric Scene',
         sceneClass: ISOScene
+    },
+    {
+        slug: 'iso-movement',
+        ready: true,
+        title: 'ISO Movement',
+        sceneFile: 'ISOMovement.js',
+        description: '',
+        imageUrl: 'https://user-images.githubusercontent.com/10467454/225596986-1e1b80e9-d166-4f9f-af46-3563165ff195.png',
+        imageAlt: 'Phaser Plus example - Isometric Movement',
+        sceneClass: ISOMovement
     },
     {
         slug: 'object-pooling',
