@@ -18,7 +18,7 @@
         "@tweakpane/core": "^1.1.6",
         "nodemon": "^2.0.22",
         "parcel": "^2.8.3",
-        "phaser": "^3.55.2",
+        "phaser": "^3.60.0",
         "typescript": "^5.0.4"
     }
 }
