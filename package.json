@@ -19,6 +19,6 @@
         "nodemon": "^2.0.22",
         "parcel": "^2.8.3",
         "phaser": "^3.55.2",
-        "typescript": "^5.0.4"
+        "typescript": "^5.1.3"
     }
 }
