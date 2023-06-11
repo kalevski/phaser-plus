@@ -17,7 +17,7 @@
         "@toolcase/logging": "^0.3.12",
         "@tweakpane/core": "^1.1.6",
         "nodemon": "^2.0.22",
-        "parcel": "^2.8.3",
+        "parcel": "^2.9.2",
         "phaser": "^3.55.2",
         "typescript": "^5.0.4"
     }
