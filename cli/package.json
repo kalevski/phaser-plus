@@ -56,7 +56,7 @@
     },
     "license": "MIT",
     "devDependencies": {
-        "commander": "^10.0.0",
+        "commander": "^11.0.0",
         "concurrently": "^8.0.1",
         "cors": "^2.8.5",
         "express": "^4.18.2",
